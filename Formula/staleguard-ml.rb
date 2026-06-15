@@ -4,7 +4,6 @@ class StaleguardMl < Formula
   url "https://github.com/Arthur920/Staleguard/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "e4e6c3eb9a7f6ebe14a00295c49e8fa5b0f2e10d9e8098f67ba2c64446642b9c"
   license "MIT"
-  version "0.1.1"
 
   depends_on "rust" => :build
 
