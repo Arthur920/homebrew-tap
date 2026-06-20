@@ -1,25 +1,25 @@
 class Staleguard < Formula
   desc "Sanity-check CLAUDE.md, project docs, and code against each other for coherence drift."
   homepage "https://github.com/Arthur920/Staleguard"
-  version "0.2.0"
+  version "0.2.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.0/staleguard-aarch64-apple-darwin.tar.xz"
-      sha256 "76fa8edb2576f1a9b4ec000b9939f642a6d785eab02892c6545cc57b60f3c4ba"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-aarch64-apple-darwin.tar.xz"
+      sha256 "616404e3691444f6d2d2efe1e899787f3cb240395a726436e2d13b183b7759c2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.0/staleguard-x86_64-apple-darwin.tar.xz"
-      sha256 "661529cb93f638a61739e31ca4822625b270fb58c63d2cafd0cd54434dd3238d"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-x86_64-apple-darwin.tar.xz"
+      sha256 "f5a673009f7fec15352e1b30199bfd899f00889a560b9472299f47f7346c6c24"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.0/staleguard-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "36fde3c8bc7cd9e6d9036d1f87e069279d589dd7463a2d001532279d651950a0"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c474fb3c790ce0584aa07d83a4c66faf5b3ff921bea2fab5febe7419dd944fa6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.0/staleguard-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "49bb85b31bcee3783c850a09b396b92f1a1e40f6fb664874b15929ef11093709"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e34968a803b890f64b6ee04386035ea1f5d0d2659657c9ba7af4b504f0913fa0"
     end
   end
   license "MIT"
