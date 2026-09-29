@@ -1,25 +1,25 @@
 class Staleguard < Formula
   desc "Sanity-check CLAUDE.md, project docs, and code against each other for coherence drift."
   homepage "https://github.com/Arthur920/Staleguard"
-  version "0.2.2"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-aarch64-apple-darwin.tar.xz"
-      sha256 "616404e3691444f6d2d2efe1e899787f3cb240395a726436e2d13b183b7759c2"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.3.0/staleguard-aarch64-apple-darwin.tar.xz"
+      sha256 "8cbad5adb95624652517b32b4369ba5775588c2c6465f1a059da85b8e2378826"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-x86_64-apple-darwin.tar.xz"
-      sha256 "f5a673009f7fec15352e1b30199bfd899f00889a560b9472299f47f7346c6c24"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.3.0/staleguard-x86_64-apple-darwin.tar.xz"
+      sha256 "79c72a9ffd4633cf10d62dd3403a4ec36b431d2d45f36504fb69c82b6c8da2df"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c474fb3c790ce0584aa07d83a4c66faf5b3ff921bea2fab5febe7419dd944fa6"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.3.0/staleguard-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3c164efbf4bc36bf889c830522e91a9091a78c978d34780b3b28e3bb6e44ed82"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Arthur920/Staleguard/releases/download/v0.2.2/staleguard-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e34968a803b890f64b6ee04386035ea1f5d0d2659657c9ba7af4b504f0913fa0"
+      url "https://github.com/Arthur920/Staleguard/releases/download/v0.3.0/staleguard-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9bb9696a47a7ad1431c57caa63a7279db736209623632477d22e8ddc6b36aaa9"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Staleguard < Formula
   end
 
   def install
-    bin.install "staleguard" if OS.mac? && Hardware::CPU.arm?
-    bin.install "staleguard" if OS.mac? && Hardware::CPU.intel?
-    bin.install "staleguard" if OS.linux? && Hardware::CPU.arm?
-    bin.install "staleguard" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "staleguard"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "staleguard"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "staleguard"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "staleguard"
+    end
 
     install_binary_aliases!
 
